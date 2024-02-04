@@ -1,14 +1,23 @@
+import java.lang.Thread;
+
 public class Main 
 {
   public static void main(String[] args) 
   {
-
-
-    System.out.println("Lugi");
-    
+    loading();
     if(login("test", "test"))
     {
-      print("hey there");
+      System.out.print("\033[H\033[2J");
+      print("Hey There! Welcome to JavaOS");
+      print("Please choose a command:");
+      print("1) Math Operations");
+      print("2) AI ChatBot");
+      print("3) Roll the Dice");
+      print("4) Meme Generator");
+      print("5) Stoic Quote");
+      print("6) Guessing Game");
+      print("7) OS Version");
+      print("8) Exit");
     }
  
     
@@ -29,4 +38,31 @@ public class Main
       return false;
     }
   }
+  private static void loading(){
+    try {
+        for (int j = 0; j < 10; j++) {
+          System.out.print("\033[H\033[2J");
+          System.out.print("Loading");
+          System.out.print(".");
+          Thread.sleep(300);
+          System.out.print(".");
+          Thread.sleep(300);
+          System.out.print(".");
+          Thread.sleep(300);
+        }
+      for(int i = 0; i < 100; i++){
+        System.out.print("\033[H\033[2J");
+        //System.out.println("Loading...");
+        System.out.println("\rProgess: " + i + "%");
+        Thread.sleep(50);
+      }
+      Thread.sleep(200);
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+    }
+  }
+}
+class userInfo{
+  String username;
+  String password;
 }
