@@ -5,7 +5,11 @@ public class Main
 
 
     System.out.println("Lugi");
-
+    
+    if(login("test", "test"))
+    {
+      print("hey there");
+    }
  
     
   }
@@ -13,13 +17,6 @@ public class Main
   {
     System.out.println(text);
 
-    System.out.println("Hello world! Armin sup");
-
-
-
-    if(login("test", "test")){
-      print("hey there");
-    }
   }
 
 
@@ -27,6 +24,9 @@ public class Main
     if(username.equals("test") && password.equals("test")){
       return true;
     }
-    else{return false;}
+    else
+    {
+      return false;
+    }
   }
 }
