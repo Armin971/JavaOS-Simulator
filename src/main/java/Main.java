@@ -5,7 +5,11 @@ public class Main
 
     System.out.println("Lugi");
 
-    System.out.println("Hello world! Armin sup");
-
+ 
+    
+  }
+  private static void print(String text)
+  {
+    System.out.println(text);
   }
 }
